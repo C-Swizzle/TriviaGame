@@ -6,8 +6,10 @@ $("#start").on("click", timer);
 
 function timer(){
 hideButton();
+showGame();
 var time=120;
 var buttonHidden=false;
+var gameShown = false;
 $("#display").html("Time Remaining: " + "<br>" + timeConverter(time));
 var intervalId;
 function countDown() {
@@ -44,6 +46,12 @@ function hideButton() {
     $("#start").css("display", "none");
     $("#instructions").css("display", "none");
     buttonHidden=true;
+    }
+}
+function showGame() {
+    if (!gameShown) {
+        $(".game").css("display", "block");
+        gameShown=true;
     }
 }
 }

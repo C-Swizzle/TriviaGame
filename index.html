@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.js"
-  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-  crossorigin="anonymous"></script>
-  <script src="assets/javascript/app.js"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
     <div class="container">
-    <h1 id="display"></h1>
-    <p id="instructions">This is a timed Trivia Quiz! Try to get as many answers right as you can!</p>
-    <button id="start">Start</button>
-</div>
+        <h1 id="display"></h1>
+        <p id="instructions">This is a timed Trivia Quiz! Try to get as many answers right as you can!</p>
+        <button id="start">Start</button>
+    </div>
+    <div class="game">
+        <p>What is the best gender?</p>
+        <form id="q1">
+            <div class="choices">
+                <div class="bubble">
+                    <input type="radio" name="gender" value="male"> Male<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="gender" value="male"> Male<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="gender" value="male"> Male<br>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

@@ -19,3 +19,22 @@ body {
     padding: 30px 0px;
     text-align: center;
 }
+.game {
+    width: 960px;
+    background-color: cyan;
+    margin: 40px auto;
+    padding: 30px 0px;
+    text-align: center;
+    display: none;
+}
+.bubble {
+    float: left;
+    margin-left: 20px;
+}
+#q1 {
+    /* text-align: center; */
+}
+.choices {
+    display: inline-block;
+    text-align: center;
+}
