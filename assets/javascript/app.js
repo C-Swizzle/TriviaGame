@@ -1,13 +1,20 @@
 $(document).ready(function() {
 //timer function
+
+$("#start").on("click", timer);
+
+
+function timer(){
+hideButton();
 var time=120;
-$("#display").text("Time remaining: " + timeConverter(time));
+var buttonHidden=false;
+$("#display").html("Time Remaining: " + "<br>" + timeConverter(time));
 var intervalId;
 function countDown() {
     stop();
     if (time>0) {
     time--;
-    $("#display").text("Time remaining: " + timeConverter(time));
+    $("#display").html("Time Remaining: " + "<br>" + timeConverter(time));
     }
 }
 intervalId=setInterval(countDown, 1000);
@@ -28,12 +35,17 @@ function timeConverter(x) {
 function stop() {
     if (time===0) {
         clearInterval(intervalId);
-        $("#display").text("Time remaining: " + "00:00");
+        $("#display").html("Time Remaining: " + "<br>" + "00:00");
         alert("Times up!")
 }
     }
-
-
-
+function hideButton() {
+    if (!buttonHidden){
+    $("#start").css("display", "none");
+    $("#instructions").css("display", "none");
+    buttonHidden=true;
+    }
+}
+}
 
 });

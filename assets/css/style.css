@@ -1,0 +1,21 @@
+body {
+    background-image: url("../images/bananas.png")
+}
+#display, #instructions {
+    text-align: center;
+    color: purple;
+    font-size: 40px;
+    font-family: Comic Sans MS, sans-serif;
+}
+#start {
+   padding: 30px;
+   font-size: 40px;
+   font-family: Comic Sans Ms, sans-serif;
+}
+.container {
+    width: 960px;
+    background-color: grey;
+    margin: 40px auto;
+    padding: 30px 0px;
+    text-align: center;
+}
