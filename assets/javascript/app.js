@@ -14,7 +14,7 @@ $("#start").on("click", timer);
 function timer(){
 hideButton();
 showGame();
-var time=120;
+var time=60;
 var buttonHidden=false;
 var gameShown = false;
 $("#display").html("Time Remaining: " + "<br>" + timeConverter(time));
