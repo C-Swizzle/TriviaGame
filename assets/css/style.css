@@ -26,13 +26,16 @@ body {
     padding: 30px 0px;
     text-align: center;
     display: none;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .bubble {
     float: left;
     margin-left: 20px;
 }
-#q1 {
-    /* text-align: center; */
+#submit {
+    padding: 20px;
+    font-size: 20px;
 }
 .choices {
     display: inline-block;

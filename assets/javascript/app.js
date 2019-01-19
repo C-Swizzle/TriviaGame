@@ -4,6 +4,7 @@ var q1Ans="";
 var q2Ans="";
 var q3Ans="";
 var q4Ans="";
+var intervalId;
 $("#start").on("click", timer);
 
 
@@ -14,7 +15,7 @@ var time=120;
 var buttonHidden=false;
 var gameShown = false;
 $("#display").html("Time Remaining: " + "<br>" + timeConverter(time));
-var intervalId;
+
 function countDown() {
     stop();
     if (time>0) {
@@ -97,9 +98,9 @@ function checkAnswers () {
     } else {
         incorrect++;
     }
-    console.log("Correct: " + correct);
-    console.log("Incorrect: " + incorrect);
-    console.log("Unanswered: " + unanswered);
+    // console.log("Correct: " + correct);
+    // console.log("Incorrect: " + incorrect);
+    // console.log("Unanswered: " + unanswered);
 
     function displayAnswers() {
         $(".game").css("display", "none");
@@ -111,6 +112,7 @@ function checkAnswers () {
     
     }
     displayAnswers();
+    clearInterval(intervalId);
 
 }
 
@@ -128,19 +130,19 @@ function checkAnswers () {
 
 $("input:radio[name='q1']").on("click", function (){
 q1Ans=$(this).val();
-console.log(q1Ans);
+// console.log(q1Ans);
 });
 $("input:radio[name='q2']").on("click", function (){
     q2Ans=$(this).val();
-    console.log(q2Ans);
+    //console.log(q2Ans);
     });
     $("input:radio[name='q3']").on("click", function (){
         q3Ans=$(this).val();
-        console.log(q3Ans);
+        //console.log(q3Ans);
         });
         $("input:radio[name='q4']").on("click", function (){
             q4Ans=$(this).val();
-            console.log(q4Ans);
+            //console.log(q4Ans);
             });
 
 
