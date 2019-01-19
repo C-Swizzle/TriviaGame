@@ -1,6 +1,9 @@
 $(document).ready(function() {
 //timer function
-
+var q1Ans="";
+var q2Ans="";
+var q3Ans="";
+var q4Ans="";
 $("#start").on("click", timer);
 
 
@@ -38,7 +41,7 @@ function stop() {
     if (time===0) {
         clearInterval(intervalId);
         $("#display").html("Time Remaining: " + "<br>" + "00:00");
-        alert("Times up!")
+        checkAnswers();
 }
     }
 function hideButton() {
@@ -55,5 +58,91 @@ function showGame() {
     }
 }
 }
+$("#submit").on("click", checkAnswers);
+
+function checkAnswers () {
+    var correct=0;
+    var incorrect=0;
+    var unanswered=0;
+    var correctAnswerArray = ["Euclid", "Apollo 11", "Uranium", "3.1415"];
+    if (q1Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q1Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    if (q2Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q2Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    if (q3Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q3Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    if (q4Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q4Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    console.log("Correct: " + correct);
+    console.log("Incorrect: " + incorrect);
+    console.log("Unanswered: " + unanswered);
+
+    function displayAnswers() {
+        $(".game").css("display", "none");
+        $("#answers").css("display", "block");
+        $("#right").text(correct);
+        $("#wrong").text(incorrect);
+        $("#bad").text(unanswered);
+    
+    
+    }
+    displayAnswers();
+
+}
+
+// $("#q1").on("click", function (){
+//     $(":radio").on("click", function (){
+//         q1Ans=$(this).val();
+//         console.log(q1Ans);
+//         });
+// });
+
+// $(":radio").on("click", function (){
+//     q1Ans=$(this).val();
+//     console.log(q1Ans);
+//     });
+
+$("input:radio[name='q1']").on("click", function (){
+q1Ans=$(this).val();
+console.log(q1Ans);
+});
+$("input:radio[name='q2']").on("click", function (){
+    q2Ans=$(this).val();
+    console.log(q2Ans);
+    });
+    $("input:radio[name='q3']").on("click", function (){
+        q3Ans=$(this).val();
+        console.log(q3Ans);
+        });
+        $("input:radio[name='q4']").on("click", function (){
+            q4Ans=$(this).val();
+            console.log(q4Ans);
+            });
+
+
 
 });

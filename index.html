@@ -20,21 +20,72 @@
         <button id="start">Start</button>
     </div>
     <div class="game">
-        <p>What is the best gender?</p>
+        
         <form id="q1">
+                <p>What Greek mathematician is considered the founder of geometry?</p>
             <div class="choices">
                 <div class="bubble">
-                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="q1" value="A">Socrates<br>
                 </div>
                 <div class="bubble">
-                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="q1" value="Euclid">Euclid<br>
                 </div>
                 <div class="bubble">
-                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="q1" value="C">Pythagoras<br>
                 </div>
             </div>
         </form>
+        <form id="q2">
+                <p>What are the first four decimal places of pi?</p>
+            <div class="choices">
+                <div class="bubble">
+                    <input type="radio" name="q2" value="3.1415">3.1415<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="q2" value="B">3.1423<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="q2" value="C">3.1406<br>
+                </div>
+            </div>
+        </form>
+        <form id="q3">
+                <p>What was the name of the first manned mission to the moon?</p>
+            <div class="choices">
+                <div class="bubble">
+                    <input type="radio" name="q3" value="Apollo 11">Apollo 11<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="q3" value="B">Sputnik 1<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="q3" value="C">Pioneer 1<br>
+                </div>
+            </div>
+        </form>
+        <form id="q4">
+                <p>What is the heaviest naturally occuring element?</p>
+            <div class="choices">
+                <div class="bubble">
+                    <input type="radio" name="q4" value="A">Lead<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="q4" value="B">Gold<br>
+                </div>
+                <div class="bubble">
+                    <input type="radio" name="q4" value="Uranium">Uranium<br>
+                </div>
+            </div>
+        </form>
+        <br>
+        <button id="submit">Submit</button>
     </div>
+    <div id="answers">
+        Correct: <div id="right"></div>
+        Incorrect: <div id="wrong"></div>
+        Unanswered: <div id="bad"></div>
+    </div>
+
 </body>
 
 </html>

@@ -38,3 +38,10 @@ body {
     display: inline-block;
     text-align: center;
 }
+#answers {
+    display: none;
+    background-color: darkgreen;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
