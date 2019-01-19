@@ -4,6 +4,9 @@ var q1Ans="";
 var q2Ans="";
 var q3Ans="";
 var q4Ans="";
+var q5Ans="";
+var q6Ans="";
+var q7Ans="";
 var intervalId;
 $("#start").on("click", timer);
 
@@ -65,7 +68,7 @@ function checkAnswers () {
     var correct=0;
     var incorrect=0;
     var unanswered=0;
-    var correctAnswerArray = ["Euclid", "Apollo 11", "Uranium", "3.1415"];
+    var correctAnswerArray = ["Euclid", "Apollo 11", "Uranium", "3.1415", "450", "barometer", "photo"];
     if (q1Ans==="") {
         unanswered++;
         
@@ -94,6 +97,30 @@ function checkAnswers () {
         unanswered++;
         
     } else if (correctAnswerArray.indexOf(q4Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    if (q5Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q5Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    if (q6Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q6Ans)>-1) {
+        correct++
+    } else {
+        incorrect++;
+    }
+    if (q7Ans==="") {
+        unanswered++;
+        
+    } else if (correctAnswerArray.indexOf(q7Ans)>-1) {
         correct++
     } else {
         incorrect++;
@@ -144,7 +171,20 @@ $("input:radio[name='q2']").on("click", function (){
             q4Ans=$(this).val();
             //console.log(q4Ans);
             });
+            $("input:radio[name='q5']").on("click", function (){
+                q5Ans=$(this).val();
+                //console.log(q5Ans);
+                });
+                $("input:radio[name='q6']").on("click", function (){
+                    q6Ans=$(this).val();
+                    //console.log(q5Ans);
+                    });
 
+                    $("input:radio[name='q7']").on("click", function (){
+                        q7Ans=$(this).val();
+                        //console.log(q5Ans);
+                        });
+        
 
 
 });
